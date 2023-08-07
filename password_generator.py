@@ -2,18 +2,16 @@ import random
 import string
  
 def genrator(le,num,sym):
-     password=[]
-     for i in range(le):
-        password.append(random.choice(string.ascii_letters))
-     for i in range(num):
-          password.append(random.randint(0,9))
-     for i in range(sym):
-          password.append(random.choice(string.punctuation))
-     random.shuffle(password)
+     passw= ''
      print("this is your password as per your requirment: ")
-     passw = ' '.join(map(str, password))
-     new_pass = "".join(passw.split())
-     print(new_pass)
+     for i in range(le):
+        passw+=random.choice(string.ascii_letters)
+     for i in range(num):
+          passw+=str(random.randint(0,9))
+     for i in range(sym):
+         passw+=random.choice(string.punctuation)
+     print(''.join(random.sample(passw,len(passw))))
+      
      
 
 print("welcome to the password generator  ")
