@@ -1,5 +1,4 @@
 import time
-import sys
 from pydub import AudioSegment
 from pydub.playback import play
 beep = AudioSegment.from_file("vinishdas/miniproject/audio/beep-07a.mp3")
@@ -52,7 +51,7 @@ while(True):
     elif(choice ==2):
         MorToText()
     elif(choice ==3):
-            sys.exit()
+            exit()
             
     else:print("invalid \n")
     
