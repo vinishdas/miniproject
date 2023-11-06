@@ -1,4 +1,11 @@
 import time
+import sys
+from playsound import playsound
+
+beep = playsound("vinishdas/miniproject/audio/beep-07a.mp3")
+boop = playsound("vinishdas/miniproject/audio/beep-08b.mp3")
+
+ 
 
 morse_code_dict = {
     'a': '.-', 'b': '-...', 'c': '-.-.', 'd': '-..', 'e': '.',
@@ -10,10 +17,29 @@ morse_code_dict = {
 }
 
 def TextToMor():
-    print("enter the text you want to convert: ",end='')
+    print("\nenter the text you want to convert: ",end='')
     text = input()
     for i in text:
-        print(morse_code_dict[i],end='')
+        for j in morse_code_dict.get(i,"null"):
+             if(j == '.'):
+                print(j,end='')
+                time.sleep(0.5)
+                playsound(beep)
+             else:
+                print(j,end='')
+                time.sleep(0.5)
+                playsound(boop)
+        print(' ',end='')
+    print('\n')
+def MorToText():
+    print("\nenter the morse code with space for letter: ",end='')
+    text = input().split()
+    for i in text:
+        for key ,value in morse_code_dict.items():
+             if(value == i):
+                print(key,end='')
+            #  else:print("null",end='')
+    print('\n')
 
 print("MENU\n")
 print(" Type 1 to convert text to morse Code")
@@ -21,11 +47,16 @@ print(" Type 2 to convert morse Code to text")
 print(" Type 3 to exit\n\n")
 while(True):
     print("enter your choice: ",end = '')
-    choice= input()
-    if(choice == 1):
+    choice= int(input())
+    if(choice ==1):
         TextToMor()
-    else:break
-       
+    elif(choice ==2):
+        MorToText()
+    elif(choice ==3):
+            sys.exit()
+            
+    else:print("invalid \n")
+    
 
 
 
