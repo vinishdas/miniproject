@@ -34,12 +34,9 @@ void Student::input()
     cin >> name;
     cout << "Enter USN:";
     cin >> USN;
-    cout << "enter marks for math:";
-    cin >> marksMath;
-    cout << "enter marks for physics:";
-    cin >> marksPhy;
-    cout << "enter marks for English:";
-    cin >> marksEng;
+    cout << "enter marks :";
+    cin >> marksMath>>marksEng>>marksPhy;
+     
     percentage(marksEng,marksPhy,marksMath);
 }
 
