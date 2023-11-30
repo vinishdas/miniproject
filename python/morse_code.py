@@ -1,8 +1,8 @@
 import time
-from pydub import AudioSegment
-from pydub.playback import play
-beep = AudioSegment.from_file("vinishdas/miniproject/audio/beep-07a.mp3",format="mp3")
-boop = AudioSegment.from_file("vinishdas/miniproject/audio/beep-08b.mp3",format="mp3")
+# from pydub import AudioSegment
+# from pydub.playback import play
+# beep = AudioSegment.from_file("vinishdas/miniproject/audio/beep-07a.mp3",format="mp3")
+# boop = AudioSegment.from_file("vinishdas/miniproject/audio/beep-08b.mp3",format="mp3")
 
  
 morse_code_dict = {
@@ -22,11 +22,11 @@ def TextToMor():
              if(j == '.'):
                 print(j,end='')
                 time.sleep(0.5)
-                play(beep)
+                # play(beep)
              else:
                 print(j,end='')
                 time.sleep(0.5)
-                play(boop)
+                # play(boop)
         print(' ',end='')
     print('\n')
 def MorToText():

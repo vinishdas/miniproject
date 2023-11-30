@@ -13,7 +13,12 @@ def genrator(le,num,sym):
      print(''.join(random.sample(passw,len(passw))))
       
      
-
+print("""    ___                                    _                                   _             
+   / _ \__ _ ___ _____      _____  _ __ __| |   __ _  ___ _ __   ___ _ __ __ _| |_ ___  _ __ 
+  / /_)/ _` / __/ __\ \ /\ / / _ \| '__/ _` |  / _` |/ _ \ '_ \ / _ \ '__/ _` | __/ _ \| '__|
+ / ___/ (_| \__ \__ \\ V  V / (_) | | | (_| | | (_| |  __/ | | |  __/ | | (_| | || (_) | |   
+ \/    \__,_|___/___/ \_/\_/ \___/|_|  \__,_|  \__, |\___|_| |_|\___|_|  \__,_|\__\___/|_|   
+                                               |___/                                         ,""")
 print("welcome to the password generator  ")
 print("how many letters do you want in your password? : ",end =' ')
 letter = int(input())
